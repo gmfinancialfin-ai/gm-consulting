@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GM Consulting Group - Consultoría en implementación de Inteligencia Artificial y transformación digital en Guayaquil, Ecuador">
+<title>GM Consulting Group</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A3D91'/%3E%3Ctext x='50' y='68' font-size='44' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3EGM%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --primary: #0A3D91;
+    --primary-dark: #072B66;
+    --accent: #2E7CF6;
+    --bg: #F4F7FC;
+    --card: #FFFFFF;
+    --text: #0F172A;
+    --text-muted: #5B6B84;
+    --border: #E3EAF5;
+    --soft-blue: #CBD7F3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  a { color: var(--accent); }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--primary);
+    box-shadow: 0 2px 10px rgba(7, 43, 102, 0.25);
+  }
+
+  .header-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .brand-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .brand-name {
+    color: #fff;
+    font-weight: 800;
+    font-size: 17px;
+    letter-spacing: 0.2px;
+  }
+
+  /* Language selector top-right */
+  .lang-switcher {
+    display: flex;
+    gap: 4px;
+  }
+
+  .lang-btn {
+    background: transparent;
+    color: var(--soft-blue);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .lang-btn:hover { background: rgba(255,255,255,0.12); }
+
+  .lang-btn.active {
+    background: #fff;
+    color: var(--primary);
+    border-color: #fff;
+  }
+
+  .music-btn {
+    background: transparent;
+    color: var(--soft-blue);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .music-btn:hover { background: rgba(255,255,255,0.12); }
+
+  .lang-btn:focus-visible,
+  a:focus-visible,
+  button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 60%, #1246A6 100%);
+    color: #fff;
+    text-align: center;
+    padding: 72px 24px 60px;
+  }
+
+  .hero-badge {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: 800;
+    margin: 0 auto 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  }
+
+  .hero h1 { font-size: 2.2rem; letter-spacing: 0.3px; }
+
+  .hero .tagline {
+    max-width: 640px;
+    margin: 14px auto 0;
+    color: var(--soft-blue);
+    font-size: 1.05rem;
+  }
+
+  .hero-cta {
+    margin-top: 28px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    border-radius: 12px;
+    padding: 14px 26px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.98rem;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  .btn:hover { transform: translateY(-2px); }
+
+  .btn-primary { background: #fff; color: var(--primary); }
+  .btn-secondary { background: transparent; color: #fff; border: 2px solid #fff; }
+
+  /* Video promocional en hero */
+  .video-wrap {
+    margin-top: 32px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    border: 2px solid rgba(255,255,255,0.15);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+  }
+  .video-wrap video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* ---------- Sections ---------- */
+  main { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  section { padding: 52px 0 0; }
+
+  .section-title {
+    font-size: 1.7rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+
+  .section-sub {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 28px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+  }
+
+  .card p { color: var(--text); }
+
+  /* About */
+  .about-text {
+    background: var(--card);
+    border-left: 5px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 22px;
+    font-size: 1rem;
+  }
+
+  /* Features grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+  }
+
+  .feature {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+  }
+
+  .feature h3 { color: var(--primary); font-size: 1.05rem; margin-bottom: 6px; }
+  .feature p { color: var(--text-muted); font-size: 0.95rem; }
+
+  /* Services grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+  }
+
+  .service h3 { color: var(--primary); font-size: 1.05rem; margin-bottom: 8px; }
+  .service p { color: var(--text); font-size: 0.95rem; }
+  .service:hover { box-shadow: 0 10px 26px rgba(10, 61, 145, 0.12); }
+
+  /* Location + contact */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+
+  .contact-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s;
+  }
+
+  .contact-item:hover { box-shadow: 0 8px 22px rgba(10, 61, 145, 0.12); transform: translateY(-2px); }
+
+  .contact-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-item h3 { color: var(--text); font-size: 0.98rem; margin-bottom: 2px; }
+  .contact-item p { color: var(--text-muted); font-size: 0.9rem; }
+
+  .contact-item .contact-value {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  /* LinkedIn social proof banner */
+  .social-proof {
+    margin-top: 32px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    background: linear-gradient(135deg, #0A66C2 0%, var(--primary) 70%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 26px 28px;
+    text-decoration: none;
+    box-shadow: 0 10px 26px rgba(10, 102, 194, 0.25);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  .social-proof:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(10, 102, 194, 0.35); }
+
+  .sp-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: #fff;
+    color: #0A66C2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sp-label {
+    font-size: 0.92rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  .sp-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .sp-value .sp-seguidores { font-weight: 600; font-size: 0.95rem; opacity: 0.92; }
+
+  /* CTA banner */
+  .cta-banner {
+    margin-top: 52px;
+    background: var(--accent);
+    border-radius: 16px;
+    text-align: center;
+    color: #fff;
+    padding: 34px 22px;
+  }
+
+  .cta-banner h2 { font-size: 1.4rem; margin-bottom: 8px; }
+  .cta-banner p { opacity: 0.95; }
+  .cta-banner .btn-primary { margin-top: 20px; display: inline-block; }
+
+  /* Footer */
+  footer {
+    margin-top: 52px;
+    background: var(--primary-dark);
+    color: var(--soft-blue);
+    text-align: center;
+    padding: 26px 20px;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 520px) {
+    .hero h1 { font-size: 1.7rem; }
+    section { padding-top: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#inicio" aria-label="GM Consulting Group">
+      <span class="brand-badge">GM</span>
+      <span class="brand-name">GM Consulting Group</span>
+    </a>
+    <nav class="lang-switcher" aria-label="Selección de idioma">
+      <button class="lang-btn active" type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button class="lang-btn" type="button" data-lang="it" aria-pressed="false">IT</button>
+    </nav>
+    <button class="music-btn" id="musicBtn" type="button" title="Música de fondo" aria-pressed="false">🔇</button>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-badge">GM</div>
+  <h1>GM Consulting Group</h1>
+  <p class="tagline" data-i18n="hero.tagline">Consultoría en implementación de Inteligencia Artificial y transformación digital</p>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="#servicios" data-i18n="hero.viewServices">Ver servicios</a>
+    <a class="btn btn-secondary" href="#contacto" data-i18n="hero.contactUs">Contáctanos</a>
+  </div>
+  <div class="video-wrap">
+    <video src="AI_Integration_Video_Intro_Request.mp4" controls muted loop playsinline preload="metadata"></video>
+  </div>
+</section>
+
+<main>
+  <section id="nosotros">
+    <h2 class="section-title" data-i18n="about.title">Quiénes somos</h2>
+    <p class="section-sub" data-i18n="about.subtitle">Conoce más sobre nuestra empresa y misión.</p>
+    <div class="card about-text">
+      <p data-i18n="about.text">Somos consultores especializados en llevar la Inteligencia Artificial y la digitalización a las empresas. Te acompañamos en cada paso para que tu negocio alcance su máximo potencial.</p>
+    </div>
+  </section>
+
+  <section id="porque">
+    <h2 class="section-title" data-i18n="why.title">Por qué elegirnos</h2>
+    <div class="features-grid" id="features-list"></div>
+  </section>
+
+  <section id="servicios">
+    <h2 class="section-title" data-i18n="services.title">Nuestros servicios</h2>
+    <p class="section-sub" data-i18n="services.subtitle">Todo lo que tu empresa necesita para dar el salto digital con Inteligencia Artificial.</p>
+    <div class="services-grid" id="services-list"></div>
+  </section>
+
+  <section id="contacto">
+    <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+    <p class="section-sub" data-i18n="contact.subtitle">Estamos listos para impulsar tu empresa. Elige tu canal favorito.</p>
+    <div class="contact-grid">
+      <a class="contact-item" href="https://wa.me/593983461216" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <span class="contact-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.9 14.2c-.2.6-1.2 1.1-1.7 1.2-.4 0-1 .2-3.3-.7a11.5 11.5 0 0 1-4.7-4.1c-.3-.6-1.7-2.4-1.7-4.5s1-3 1.4-3.4c.1-.1.3-.2.4-.2h.4c.1 0 .3 0 .4.6.1.4.5 1.8.5 1.9l.3.7c0 .3-.3.8-.6 1.1l-.4.5c-.2.2-.3.3-.1.6.2.3.9 1.5 1.9 2.4 1.3 1.1 2.3 1.5 2.6 1.7.3.1.5.1.7-.1.2-.2.9-1 1.2-1.4.3-.4.6-.3.7-.2.5.4 2.2 1 2.6 1.1.4.2.6.3.7.4Z"/></svg>
+        </span>
+        <div>
+          <h3 data-i18n="contact.whatsapp.title">WhatsApp</h3>
+          <p class="contact-value">+593 98 346 1216</p>
+          <p data-i18n="contact.whatsapp.sub">Escríbenos y te respondemos rápido</p>
+        </div>
+      </a>
+
+      <a class="contact-item" href="tel:+593983461216" aria-label="Teléfono">
+        <span class="contact-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        </span>
+        <div>
+          <h3 data-i18n="contact.phone.title">Teléfono</h3>
+          <p class="contact-value">+593 98 346 1216</p>
+          <p data-i18n="contact.phone.sub">Llámanos en horario laboral</p>
+        </div>
+      </a>
+
+      <a class="contact-item" href="mailto:somosgm.ai@gmail.com" aria-label="Correo electrónico">
+        <span class="contact-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </span>
+        <div>
+          <h3 data-i18n="contact.email.title">Correo electrónico</h3>
+          <p class="contact-value">somosgm.ai@gmail.com</p>
+          <p data-i18n="contact.email.sub">Cuéntanos tu proyecto por escrito</p>
+        </div>
+      </a>
+
+      <a class="contact-item" href="https://maps.google.com/?q=Guayaquil,Ecuador" target="_blank" rel="noopener" aria-label="Ubicación">
+        <span class="contact-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <div>
+          <h3 data-i18n="contact.location.title">Ubicación</h3>
+          <p class="contact-value" data-i18n="contact.location.value">Guayaquil, Ecuador</p>
+          <p data-i18n="contact.location.sub">Ver en Google Maps</p>
+        </div>
+      </a>
+    </div>
+
+    <a class="social-proof" href="https://www.linkedin.com/posts/gmconsultingec_gm-ai-business-consultancy-on-instagram-activity-7502834566760501251-bKPK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAoipR8Bc8ysM-xzHWuNj6niOkqxghJqmkU" target="_blank" rel="noopener" aria-label="Síguenos en LinkedIn">
+      <span class="sp-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </span>
+      <div>
+        <p class="sp-label" data-i18n="linkedin.sub">Síguenos en LinkedIn</p>
+        <!-- EDITAR AQUÍ: reemplaza +10,000 con tu cifra real de seguidores -->
+        <p class="sp-value">+10,000 <span class="sp-seguidores" data-i18n="linkedin.followers">seguidores</span></p>
+      </div>
+    </a>
+
+    <div class="cta-banner">
+      <h2 data-i18n="cta.title">¿Listo para transformar tu empresa?</h2>
+      <p data-i18n="cta.sub">Solicita una consultoría sin compromiso y descubre cómo la IA puede impulsar tu negocio.</p>
+      <a class="btn btn-primary" href="https://wa.me/593983461216" target="_blank" rel="noopener" data-i18n="cta.button">Escríbenos por WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 GM Consulting Group · <span data-i18n="footer.location">Guayaquil, Ecuador</span></p>
+</footer>
+
+<script>
+  const I18N = {
+    es: {
+      "hero.tagline": "Consultoría en implementación de Inteligencia Artificial y transformación digital",
+      "hero.viewServices": "Ver servicios",
+      "hero.contactUs": "Contáctanos",
+      "about.title": "Quiénes somos",
+      "about.subtitle": "Conoce más sobre nuestra empresa y misión.",
+      "about.text": "Somos consultores especializados en llevar la Inteligencia Artificial y la digitalización a las empresas. Te acompañamos en cada paso para que tu negocio alcance su máximo potencial.",
+      "why.title": "Por qué elegirnos",
+      "services.title": "Nuestros servicios",
+      "services.subtitle": "Todo lo que tu empresa necesita para dar el salto digital con Inteligencia Artificial.",
+      "contact.title": "Contacto",
+      "contact.subtitle": "Estamos listos para impulsar tu empresa. Elige tu canal favorito.",
+      "contact.whatsapp.title": "WhatsApp",
+      "contact.whatsapp.sub": "Escríbenos y te respondemos rápido",
+      "contact.phone.title": "Teléfono",
+      "contact.phone.sub": "Llámanos en horario laboral",
+      "contact.email.title": "Correo electrónico",
+      "contact.email.sub": "Cuéntanos tu proyecto por escrito",
+      "contact.location.title": "Ubicación",
+      "contact.location.value": "Guayaquil, Ecuador",
+      "contact.location.sub": "Ver en Google Maps",
+      "cta.title": "¿Listo para transformar tu empresa?",
+      "cta.sub": "Solicita una consultoría sin compromiso y descubre cómo la IA puede impulsar tu negocio.",
+      "cta.button": "Escríbenos por WhatsApp",
+      "linkedin.sub": "Síguenos en LinkedIn",
+      "linkedin.followers": "seguidores",
+      "footer.location": "Guayaquil, Ecuador"
+    },
+    en: {
+      "hero.tagline": "Consulting for AI implementation and digital transformation",
+      "hero.viewServices": "View services",
+      "hero.contactUs": "Contact us",
+      "about.title": "About us",
+      "about.subtitle": "Learn more about our company and mission.",
+      "about.text": "We are specialized consultants who bring Artificial Intelligence and digitalization to companies. We guide you every step of the way so your business reaches its full potential.",
+      "why.title": "Why choose us",
+      "services.title": "Our services",
+      "services.subtitle": "Everything your company needs to make the digital leap with Artificial Intelligence.",
+      "contact.title": "Contact",
+      "contact.subtitle": "We are ready to boost your company. Choose your favorite channel.",
+      "contact.whatsapp.title": "WhatsApp",
+      "contact.whatsapp.sub": "Message us and we will reply quickly",
+      "contact.phone.title": "Phone",
+      "contact.phone.sub": "Call us during business hours",
+      "contact.email.title": "Email",
+      "contact.email.sub": "Tell us about your project",
+      "contact.location.title": "Location",
+      "contact.location.value": "Guayaquil, Ecuador",
+      "contact.location.sub": "View on Google Maps",
+      "cta.title": "Ready to transform your company?",
+      "cta.sub": "Request a free consultation and discover how AI can boost your business.",
+      "cta.button": "Message us on WhatsApp",
+      "linkedin.sub": "Follow us on LinkedIn",
+      "linkedin.followers": "followers",
+      "footer.location": "Guayaquil, Ecuador"
+    },
+    it: {
+      "hero.tagline": "Consulenza per implementazione di Intelligenza Artificiale e trasformazione digitale",
+      "hero.viewServices": "Vedi servizi",
+      "hero.contactUs": "Contattaci",
+      "about.title": "Chi siamo",
+      "about.subtitle": "Scopri di pi\u00f9 sulla nostra azienda e mission.",
+      "about.text": "Siamo consulenti specializzati nel portare l'Intelligenza Artificiale e la digitalizzazione nelle aziende. Ti accompagniamo in ogni fase per far raggiungere al tuo business il massimo potenziale.",
+      "why.title": "Perch\u00e9 sceglierci",
+      "services.title": "I nostri servizi",
+      "services.subtitle": "Tutto ci\u00f2 che serve alla tua azienda per fare il salto digitale con l'Intelligenza Artificiale.",
+      "contact.title": "Contatti",
+      "contact.subtitle": "Siamo pronti a far crescere la tua azienda. Scegli il tuo canale preferito.",
+      "contact.whatsapp.title": "WhatsApp",
+      "contact.whatsapp.sub": "Scrivici e ti rispondiamo subito",
+      "contact.phone.title": "Telefono",
+      "contact.phone.sub": "Chiamaci in orario di lavoro",
+      "contact.email.title": "Email",
+      "contact.email.sub": "Raccontaci il tuo progetto",
+      "contact.location.title": "Posizione",
+      "contact.location.value": "Guayaquil, Ecuador",
+      "contact.location.sub": "Visualizza su Google Maps",
+      "cta.title": "Pronto a trasformare la tua azienda?",
+      "cta.sub": "Richiedi una consulenza gratuita e scopri come l'IA pu\u00f2 far crescere il tuo business.",
+      "cta.button": "Scrivici su WhatsApp",
+      "linkedin.sub": "Seguici su LinkedIn",
+      "linkedin.followers": "follower",
+      "footer.location": "Guayaquil, Ecuador"
+    }
+  };
+
+  const FEATURES = {
+    es: [
+      { title: "IA a la medida", text: "Soluciones de Inteligencia Artificial diseñadas para los retos concretos de tu empresa." },
+      { title: "Transformación real", text: "Digitalizamos procesos para que trabajes más rápido, mejor y con menos errores." },
+      { title: "Acompañamiento cercano", text: "Estamos contigo en cada etapa: diagnóstico, implementación y resultados." }
+    ],
+    en: [
+      { title: "Tailored AI", text: "Artificial Intelligence solutions designed for the specific challenges of your company." },
+      { title: "Real transformation", text: "We digitalize processes so you work faster, better and with fewer errors." },
+      { title: "Close support", text: "We are with you at every stage: diagnosis, implementation and results." }
+    ],
+    it: [
+      { title: "IA su misura", text: "Soluzioni di Intelligenza Artificiale progettate per le sfide concrete della tua azienda." },
+      { title: "Trasformazione reale", text: "Digitalizziamo i processi per lavorare pi\u00f9 velocemente, meglio e con meno errori." },
+      { title: "Accompagnamento diretto", text: "Siamo con te in ogni fase: diagnosi, implementazione e risultati." }
+    ]
+  };
+
+  const SERVICES = {
+    es: [
+      { title: "Implementación de Inteligencia Artificial", text: "Integramos soluciones de IA en tus procesos y herramientas para automatizar tareas, atender mejor a tus clientes y tomar decisiones con datos." },
+      { title: "Transformación digital", text: "Rediseñamos la operación de tu empresa con tecnología y procesos digitales que te permiten crecer sin complicaciones." },
+      { title: "Consultoría estratégica", text: "Acompañamos a tu dirección para definir el camino de digitalización adecuado a tus metas y presupuesto." },
+      { title: "Capacitación y adopción", text: "Formamos a tus equipos para que adopten la tecnología con confianza y aprovechen todo su potencial." }
+    ],
+    en: [
+      { title: "AI Implementation", text: "We integrate AI solutions into your processes and tools to automate tasks, serve your customers better and make data-driven decisions." },
+      { title: "Digital Transformation", text: "We redesign your company's operations with technology and digital processes so you can grow without complications." },
+      { title: "Strategic Consulting", text: "We guide your leadership to define the right digitalization path for your goals and budget." },
+      { title: "Training and Adoption", text: "We train your teams to adopt technology with confidence and make the most of its potential." }
+    ],
+    it: [
+      { title: "Implementazione di Intelligenza Artificiale", text: "Integriamo soluzioni di IA nei tuoi processi e strumenti per automatizzare compiti, servire meglio i clienti e prendere decisioni basate sui dati." },
+      { title: "Trasformazione digitale", text: "Ridisegniamo l'operativit\u00e0 della tua azienda con tecnologia e processi digitali per crescere senza complicazioni." },
+      { title: "Consulenza strategica", text: "Accompagniamo la tua direzione a definire la strada di digitalizzazione adatta ai tuoi obiettivi e al tuo budget." },
+      { title: "Formazione e adozione", text: "Formiamo i tuoi team per adottare la tecnologia con fiducia e sfruttarne tutto il potenziale." }
+    ]
+  };
+
+  function buildCards(list, containerId, cls) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = "";
+    list.forEach(function (item) {
+      const card = document.createElement("article");
+      card.className = cls;
+      const h = document.createElement("h3");
+      h.textContent = item.title;
+      const p = document.createElement("p");
+      p.textContent = item.text;
+      card.appendChild(h);
+      card.appendChild(p);
+      container.appendChild(card);
+    });
+  }
+
+  function applyLang(lang) {
+    document.documentElement.lang = lang;
+    const dict = I18N[lang];
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      const key = el.getAttribute("data-i18n");
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    buildCards(FEATURES[lang], "features-list", "feature");
+    buildCards(SERVICES[lang], "services-list", "service card");
+    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+      const active = btn.getAttribute("data-lang") === lang;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+    try {
+      localStorage.setItem("gm-lang", lang);
+    } catch (e) {
+      /* storage no disponible */
+    }
+  }
+
+  document.querySelectorAll(".lang-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      applyLang(btn.getAttribute("data-lang"));
+    });
+  });
+
+  let saved = null;
+  try {
+    saved = localStorage.getItem("gm-lang");
+  } catch (e) {
+    saved = null;
+  }
+  const initial = saved && I18N[saved] ? saved : "es";
+  applyLang(initial);
+
+  (function () {
+    var initd = false, playing = false;
+    var ctx = null, master = null, timerId = null, nextTime = 0, chordIdx = 0;
+    var CHORD_DUR = 2.2;
+    var CHORDS = [
+      { root: 60, intervals: [0, 4, 7, 11, 14] },
+      { root: 57, intervals: [0, 3, 7, 10, 14] },
+      { root: 62, intervals: [0, 3, 7, 10, 14] },
+      { root: 55, intervals: [0, 4, 7, 10, 14, 16] }
+    ];
+    function midi(n) { return 440 * Math.pow(2, (n - 69) / 12); }
+
+    function init() {
+      if (initd) return;
+      initd = true;
+      var AC = window.AudioContext || window.webkitAudioContext;
+      ctx = new AC();
+      master = ctx.createGain();
+      master.gain.value = 0;
+      var filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.value = 1600;
+      master.connect(filter);
+      filter.connect(ctx.destination);
+    }
+
+    function padVoice(t, freq, i) {
+      var o = ctx.createOscillator();
+      o.type = 'triangle';
+      o.frequency.value = freq;
+      var o2 = ctx.createOscillator();
+      o2.type = 'sine';
+      o2.frequency.value = freq * 2;
+      var g = ctx.createGain();
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(0.055, t + Math.min(0.6, CHORD_DUR / 3));
+      g.gain.setValueAtTime(0.055, t + CHORD_DUR * 0.7);
+      g.gain.linearRampToValueAtTime(0.0001, t + CHORD_DUR + 0.4);
+      var p = ctx.createStereoPanner ? ctx.createStereoPanner() : null;
+      if (p && p.pan !== undefined) p.pan.value = (i % 3 === 0) ? -0.4 : (i % 3 === 1 ? 0.4 : 0);
+      o.connect(g); o2.connect(g);
+      if (p) { g.connect(p); p.connect(master); } else { g.connect(master); }
+      o.start(t); o.stop(t + CHORD_DUR + 0.5);
+      o2.start(t); o2.stop(t + CHORD_DUR + 0.5);
+    }
+
+    function bassVoice(t, freq) {
+      var o = ctx.createOscillator();
+      o.type = 'sine';
+      o.frequency.value = freq;
+      var g = ctx.createGain();
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(0.085, t + 0.15);
+      g.gain.setValueAtTime(0.085, t + CHORD_DUR * 0.6);
+      g.gain.linearRampToValueAtTime(0.0001, t + CHORD_DUR + 0.3);
+      o.connect(g); g.connect(master);
+      o.start(t); o.stop(t + CHORD_DUR + 0.4);
+    }
+
+    function compTick(t, freq, off) {
+      var t0 = off ? t + CHORD_DUR * 0.78 + 0.06 : t + 0.02;
+      var o = ctx.createOscillator();
+      o.type = 'triangle';
+      o.frequency.value = freq;
+      var g = ctx.createGain();
+      g.gain.setValueAtTime(0.0001, t0);
+      g.gain.linearRampToValueAtTime(0.05, t0 + 0.015);
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.35);
+      o.connect(g); g.connect(master);
+      o.start(t0); o.stop(t0 + 0.4);
+    }
+
+    function playChord(t, chord) {
+      bassVoice(t, midi(chord.root - 12));
+      chord.intervals.forEach(function (iv, i) { padVoice(t, midi(chord.root + iv), i); });
+      compTick(t, midi(chord.root + 7), false);
+      compTick(t, midi(chord.root + 11), true);
+    }
+
+    function schedule() {
+      if (!playing) return;
+      var c = CHORDS[chordIdx % CHORDS.length];
+      playChord(nextTime, c);
+      chordIdx++;
+      nextTime += CHORD_DUR;
+      timerId = setTimeout(schedule, CHORD_DUR * 1000 - 80);
+    }
+
+    function fadeTo(v) {
+      if (!master) return;
+      master.gain.cancelScheduledValues(ctx.currentTime);
+      master.gain.linearRampToValueAtTime(v, ctx.currentTime + 0.6);
+    }
+
+    function setIcon() {
+      var b = document.getElementById('music') || document.getElementById('musicBtn');
+      if (b) b.textContent = playing ? '🔊' : '🔇';
+    }
+
+    function toggle() {
+      if (!initd) init();
+      if (ctx.state === 'suspended') ctx.resume();
+      if (playing) {
+        playing = false;
+        clearTimeout(timerId);
+        fadeTo(0);
+      } else {
+        playing = true;
+        nextTime = ctx.currentTime + 0.1;
+        chordIdx = 0;
+        fadeTo(0.11);
+        schedule();
+      }
+      setIcon();
+    }
+
+    window.gmMusicToggle = toggle;
+
+    document.getElementById('musicBtn') && document.getElementById('musicBtn').addEventListener('click', toggle);
+
+    function autoStart() {
+      if (!initd) init();
+      if (!playing && ctx.state !== 'suspended') toggle();
+    }
+    document.addEventListener('pointerdown', autoStart, { once: true });
+    document.addEventListener('keydown', autoStart, { once: true });
+  })();
+</script>
+
+</body>
+</html>
