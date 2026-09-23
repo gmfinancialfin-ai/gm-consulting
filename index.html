@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="GM Consulting Group - Consultoría en implementación de Inteligencia Artificial y transformación digital en Guayaquil, Ecuador">
 <title>GM Consulting Group</title>
+<meta property="og:title" content="GM Consulting Group â€” Consultoría y Estrategia">
+<meta property="og:description" content="Impulsamos el crecimiento de tu empresa. +30 años en alta gerencia, +50 empresas asesoradas y 100% de satisfacción de nuestra valiosa clientela. Consultorías integrales, financieras, procesos y más.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gmfinancialfin-ai.github.io/gm-consulting/">
+<meta property="og:site_name" content="GM Consulting Group">
+<meta name="theme-color" content="#0b2c5a">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A3D91'/%3E%3Ctext x='50' y='68' font-size='44' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3EGM%3C/text%3E%3C/svg%3E">
 <style>
   :root {
@@ -34,12 +40,23 @@
 
   /* ---------- Header ---------- */
   header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 50;
     background: var(--primary);
     box-shadow: 0 2px 10px rgba(7, 43, 102, 0.25);
+    transform: translateY(-101%);
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
   }
+
+  header.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
 
   .header-inner {
     max-width: 1080px;
@@ -376,9 +393,454 @@
     section { padding-top: 40px; }
   }
 </style>
+
+<style>
+
+  :root {
+    --azul: #0b2c5a;
+    --azul-2: #123f7d;
+    --celeste: #2ea8e0;
+    --dorado: #d9a441;
+    --blanco: #ffffff;
+    --gris: #eef2f7;
+    --texto: #1e293b;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+#vstage.stage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Fondo animado sutil */
+  #vstage .bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(1200px 600px at 20% -10%, rgba(46,168,224,0.25), transparent 60%),
+      radial-gradient(1000px 700px at 90% 110%, rgba(217,164,65,0.15), transparent 60%),
+      linear-gradient(140deg, #0a2247 0%, #0b2c5a 50%, #0e3a6e 100%);
+    z-index: 0;
+  }
+
+  #vstage .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+    animation: drift 40s linear infinite;
+    z-index: 0;
+  }
+  @keyframes drift {
+    from { background-position: 0 0; }
+    to { background-position: 56px 56px; }
+  }
+
+  #vstage .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5vh 8vw;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px) scale(0.98);
+    transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
+    z-index: 1;
+  }
+  #vstage .slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  #vstage .eyebrow {
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--dorado);
+    margin-bottom: 1.4rem;
+  }
+
+  #vstage h1, #vstage h2 {
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+  }
+  #vstage h1 { font-size: clamp(2.4rem, 7vw, 4.6rem); }
+  #vstage h2 { font-size: clamp(1.9rem, 5.5vw, 3.6rem); }
+
+  #vstage .sub {
+    font-size: clamp(1rem, 2.6vw, 1.5rem);
+    color: var(--gris);
+    max-width: 900px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  #vstage .accent { color: var(--celeste); }
+  #vstage .gold { color: var(--dorado); }
+
+  /* Logo */
+  #vstage .logo-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1.8rem;
+  }
+  #vstage .monogram {
+    width: 74px;
+    height: 74px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--celeste), var(--azul-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--blanco);
+    box-shadow: 0 12px 40px rgba(46,168,224,0.35);
+    animation: pulse 3s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  #vstage .logo-text {
+    text-align: left;
+    font-weight: 700;
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    line-height: 1.15;
+  }
+  #vstage .logo-text small {
+    display: block;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-size: 0.6em;
+    color: var(--dorado);
+  }
+
+  /* Tarjetas de servicios */
+  #vstage .cards {
+    display: flex;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  #vstage .card {
+    flex: 0 1 260px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 18px;
+    padding: 1.8rem 1.4rem;
+    backdrop-filter: blur(4px);
+    transition: transform 0.4s ease, background 0.4s ease;
+  }
+  #vstage .card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.10);
+  }
+  #vstage .card .icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+  #vstage .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  #vstage .card p {
+    font-size: 0.95rem;
+    color: var(--gris);
+    line-height: 1.4;
+  }
+
+  /* Números / métricas */
+  #vstage .stats {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  #vstage .stat .num {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    color: var(--celeste);
+  }
+  #vstage .stat .label {
+    font-size: 1rem;
+    color: var(--gris);
+    letter-spacing: 0.05em;
+  }
+
+  /* CTA / contacto */
+  #vstage .cta-btn {
+    margin-top: 1.8rem;
+    display: inline-block;
+    padding: 1rem 2.4rem;
+    background: linear-gradient(135deg, var(--celeste), var(--azul-2));
+    color: var(--blanco);
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 12px 35px rgba(46,168,224,0.35);
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+  #vstage .contact {
+    font-size: clamp(0.95rem, 2.4vw, 1.2rem);
+    color: var(--gris);
+    margin-top: 1.4rem;
+    line-height: 1.7;
+  }
+  #vstage .contact strong { color: var(--blanco); }
+  #vstage .contact a { color: var(--dorado); text-decoration: none; border-bottom: 1px solid rgba(217,164,65,0.4); transition: color 0.3s, border-color 0.3s; }
+  #vstage .contact a:hover { color: var(--celeste); border-color: var(--celeste); }
+
+  /* Tarjetas de redes sociales */
+  #vstage .socials {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.6rem;
+  }
+  #vstage .social-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 300px;
+    max-width: 460px;
+    flex: 1 1 auto;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 16px;
+    padding: 1rem 1.3rem;
+    text-decoration: none;
+    color: var(--blanco);
+    backdrop-filter: blur(4px);
+    transition: transform 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+  }
+  #vstage .social-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.12);
+    border-color: var(--dorado);
+  }
+  #vstage .social-card .s-icon {
+    font-size: 2rem;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--celeste), var(--azul-2));
+    flex-shrink: 0;
+  }
+  #vstage .social-card .s-body { text-align: left; min-width: 0; }
+  #vstage .social-card .s-title { font-weight: 700; font-size: 1.05rem; }
+  #vstage .social-card .s-handle { font-weight: 600; color: var(--dorado); font-size: 0.95rem; }
+  #vstage .social-card .s-desc { font-size: 0.82rem; color: var(--gris); line-height: 1.35; }
+  #vstage .social-card .s-go {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--celeste);
+    border: 1px solid rgba(46,168,224,0.5);
+    border-radius: 50px;
+    padding: 0.45rem 1rem;
+    transition: background 0.3s, color 0.3s;
+  }
+  #vstage .social-card:hover .s-go { background: var(--celeste); color: var(--blanco); }
+
+  /* Progreso abajo */
+  #vstage .progress {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.6rem;
+    z-index: 3;
+  }
+  #vstage .progress span {
+    width: 44px;
+    height: 5px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.25);
+    overflow: hidden;
+    position: relative;
+  }
+  #vstage .progress span i {
+    position: absolute;
+    inset: 0;
+    background: var(--celeste);
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  #vstage .progress span.on i { animation: fill 7s linear forwards; }
+  @keyframes fill {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  /* Mando */
+  #vstage .controls {
+    position: absolute;
+    bottom: 28px;
+    right: 28px;
+    display: flex;
+    gap: 0.6rem;
+    z-index: 4;
+  }
+  #vstage .controls button {
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.08);
+    color: var(--blanco);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background 0.3s;
+  }
+  #vstage .controls button:hover { background: var(--celeste); }
+
+  #vstage .hint {
+    position: absolute;
+    bottom: 34px;
+    left: 28px;
+    z-index: 3;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+  }
+
+  #vstage .slide { color: var(--blanco); }
+</style>
 </head>
 <body>
+<div class="stage" id="vstage">
+  <div class="bg"></div>
+  <div class="grid"></div>
 
+  <!-- SLIDE 1: Portada -->
+  <section class="slide active">
+    <div class="logo-badge">
+      <div class="monogram">GM</div>
+      <div class="logo-text">GM Consulting Group<small>Consultoría &amp; Estrategia</small></div>
+    </div>
+    <h1>Impulsamos el crecimiento de tu empresa</h1>
+    <p class="sub">Acompañamos a las organizaciones a tomar mejores decisiones con estrategia, tecnología e inteligencia artificial.</p>
+  </section>
+
+  <!-- SLIDE 2: Quiénes somos / confianza -->
+  <section class="slide">
+    <p class="eyebrow">Quiénes somos</p>
+    <h2>Un socio estratégico de <span class="accent">confianza</span></h2>
+    <p class="sub">Combinamos experiencia en consultoría empresarial con las herramientas digitales más avanzadas para convertir retos en resultados medibles.</p>
+    <div class="stats">
+      <div class="stat"><div class="num">+30</div><div class="label">Años de experiencia en alta gerencia</div></div>
+      <div class="stat"><div class="num">+50</div><div class="label">Empresas actualmente asesoradas</div></div>
+      <div class="stat"><div class="num">100%</div><div class="label">Satisfacción de nuestra valiosa clientela</div></div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: Servicios -->
+  <section class="slide">
+    <p class="eyebrow">Qué hacemos</p>
+    <h2>Soluciones a la medida <span class="gold">de tu negocio</span></h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Consultorías integrales</h3>
+        <p>Estrategia, optimización de procesos y toma de decisiones basada en datos.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💰</div>
+        <h3>Consultoría financiera</h3>
+        <p>Análisis financiero y gestión para impulsar la rentabilidad de tu empresa.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚙️</div>
+        <h3>Procesos y más</h3>
+        <p>Mejoramos tus procesos operativos y resolvemos los retos de tu negocio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: Nuestro compromiso -->
+  <section class="slide">
+    <p class="eyebrow">Nuestro compromiso</p>
+    <h2>Resultados que <span class="accent">hablan por sí solos</span></h2>
+    <p class="sub">Trabajamos de cerca con cada cliente, con comunicación transparente y un enfoque orientado a resultados reales.</p>
+    <div class="stats">
+      <div class="stat"><div class="num">100%</div><div class="label">Enfoque al cliente</div></div>
+      <div class="stat"><div class="num">24/7</div><div class="label">Acompañamiento</div></div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: CTA -->
+  <section class="slide">
+    <p class="eyebrow">Demos el siguiente paso</p>
+    <h2>Hablemos de tu proyecto</h2>
+    <p class="sub">Estamos listos para ayudarte a alcanzar el siguiente nivel.</p>
+    <a class="cta-btn" href="mailto:geovannygalarza@gmail.com">Contáctanos hoy</a>
+    <div class="contact">
+      <strong>GM Consulting Group</strong><br>
+      📧 somosgm.ai@gmail.com &nbsp;·&nbsp; 📧 geovannygalarza@gmail.com
+    </div>
+    <div class="socials">
+      <a class="social-card" href="https://lnkd.in/p/eZEVCzMX" target="_blank" rel="noopener">
+        <div class="s-icon">💼</div>
+        <div class="s-body">
+          <div class="s-title">LinkedIn</div>
+          <div class="s-handle">GM Consulting Group</div>
+          <div class="s-desc">Consultoría &amp; estrategia — visítanos</div>
+        </div>
+        <div class="s-go">Visitar</div>
+      </a>
+      <a class="social-card" href="https://www.instagram.com/somosgm.ai/" target="_blank" rel="noopener">
+        <div class="s-icon">📷</div>
+        <div class="s-body">
+          <div class="s-title">Instagram</div>
+          <div class="s-handle">@somosgm.ai</div>
+          <div class="s-desc">Estrategia, finanzas y procesos — síguenos</div>
+        </div>
+        <div class="s-go">Visitar</div>
+      </a>
+    </div>
+  </section>
+
+  <div class="progress">
+    <span class="on"><i></i></span>
+    <span><i></i></span>
+    <span><i></i></span>
+    <span><i></i></span>
+    <span><i></i></span>
+  </div>
+
+  <div class="hint">Reproducción automática · pantalla completa recomendada</div>
+
+  <div class="controls">
+    <button id="prev" title="Anterior">‹</button>
+    <button id="play" title="Play/Pausa">⏸</button>
+    <button id="next" title="Siguiente">›</button>
+    <button id="music" class="gm-music" title="Música de fondo">🔇</button>
+  </div>
+</div>
 <header>
   <div class="header-inner">
     <a class="brand" href="#inicio" aria-label="GM Consulting Group">
@@ -390,7 +852,7 @@
       <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
       <button class="lang-btn" type="button" data-lang="it" aria-pressed="false">IT</button>
     </nav>
-    <button class="music-btn" id="musicBtn" type="button" title="Música de fondo" aria-pressed="false">🔇</button>
+    <button class="music-btn gm-music" id="musicBtn" type="button" title="Música de fondo" aria-pressed="false">🔇</button>
   </div>
 </header>
 
@@ -499,6 +961,63 @@
   <p>© 2026 GM Consulting Group · <span data-i18n="footer.location">Guayaquil, Ecuador</span></p>
 </footer>
 
+<script>
+
+  const slides = document.querySelectorAll('#vstage .slide');
+  const dots = document.querySelectorAll('#vstage .progress span');
+  const PLAY_MS = 7000;
+  let current = 0;
+  let timer = null;
+  let playing = true;
+
+  function goTo(n) {
+    current = (n + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+    dots.forEach((d, i) => {
+      d.className = i === current ? 'on' : '';
+      // reinicia animación de progreso
+      const bar = d.querySelector('i');
+      bar.style.animation = 'none';
+      void bar.offsetWidth;
+      if (i === current) bar.style.animation = '';
+      else bar.style.animation = 'none';
+    });
+  }
+
+  function start() {
+    playing = true;
+    document.getElementById('play').textContent = '⏸';
+    clearInterval(timer);
+    timer = setInterval(() => goTo(current + 1), PLAY_MS);
+  }
+  function stop() {
+    playing = false;
+    document.getElementById('play').textContent = '▶';
+    clearInterval(timer);
+  }
+  function toggle() { playing ? stop() : start(); }
+
+  document.getElementById('next').onclick = () => { goTo(current + 1); stop(); };
+  document.getElementById('prev').onclick = () => { goTo(current - 1); stop(); };
+  document.getElementById('play').onclick = toggle;
+
+  document.addEventListener('keydown', (e) => {
+    if (window.scrollY > window.innerHeight) return;
+    if (e.key === 'ArrowRight') { goTo(current + 1); stop(); }
+    if (e.key === 'ArrowLeft') { goTo(current - 1); stop(); }
+    if (e.key === ' ') { e.preventDefault(); toggle(); }
+  });
+
+  // Al terminar el ciclo, vuelve a empezar
+  setInterval(() => {
+    if (playing && current === slides.length - 1) {
+      setTimeout(() => { if (playing) { goTo(0); } }, PLAY_MS);
+    }
+  }, PLAY_MS);
+
+  goTo(0);
+  start();
+</script>
 <script>
   const I18N = {
     es: {
@@ -774,12 +1293,7 @@
     }
 
     function setIcon() {
-      var b = document.getElementById('music') || document.getElementById('musicBtn');
-      if (b) b.textContent = playing ? '🔊' : '🔇';
-    }
-
-    function toggle() {
-      if (!initd) init();
+            document.querySelectorAll('.gm-music').forEach(function (b) { b.textContent = playing ? '🔊' : '🔇'; });
       if (ctx.state === 'suspended') ctx.resume();
       if (playing) {
         playing = false;
@@ -797,7 +1311,7 @@
 
     window.gmMusicToggle = toggle;
 
-    document.getElementById('musicBtn') && document.getElementById('musicBtn').addEventListener('click', toggle);
+    document.querySelectorAll('.gm-music').forEach(function (b) { b.addEventListener('click', toggle); });
 
     function autoStart() {
       if (!initd) init();
@@ -808,5 +1322,8 @@
   })();
 </script>
 
+<script>
+document.addEventListener('scroll', function () { var h = document.querySelector('header'); if (h) h.classList.toggle('visible', window.scrollY > window.innerHeight * 0.9); }, { passive: true });
+</script>
 </body>
 </html>
