@@ -802,6 +802,14 @@
   .form-msg.ok { color: #059669; display: block; } .form-msg.err { color: #DC2626; display: block; }
   @media (max-width: 640px) { .form-card { padding: 24px 18px; } .form-row { grid-template-columns: 1fr; } }
 
+  /* Feed de Instagram */
+  .ig-feed {
+    background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+    padding: 24px; overflow: hidden;
+  }
+  .ig-feed .elfsight-app-56204cb1-b4fe-4902-b9df-4869fea12a2a { min-height: 340px; }
+  html.dark .ig-feed { background: var(--card); }
+
   /* Botones flotantes */
   .wa-float {
     position: fixed; right: 22px; bottom: 22px; z-index: 60;
@@ -1082,6 +1090,16 @@
     </div>
   </section>
 
+  <section id="instagram" class="reveal">
+    <h2 class="section-title" data-i18n="instagram.title">Síguenos en Instagram</h2>
+    <p class="section-sub" data-i18n="instagram.sub">@somosgm.ai · Novedades, estrategia y resultados</p>
+    <div class="ig-feed">
+      <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-56204cb1-b4fe-4902-b9df-4869fea12a2a" data-elfsight-app-lazy></div>
+    </div>
+  </section>
+
   <section id="contacto">
     <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
     <p class="section-sub" data-i18n="contact.subtitle">Estamos listos para impulsar tu empresa. Elige tu canal favorito.</p>
@@ -1281,6 +1299,8 @@
       "nav.contact": "Contacto",
       "testimonios.title": "Testimonios",
       "testimonios.subtitle": "Lo que dicen nuestros clientes",
+      "instagram.title": "Síguenos en Instagram",
+      "instagram.sub": "@somosgm.ai · Novedades, estrategia y resultados",
       "form.title": "Escríbenos",
       "form.sub": "Cuéntanos sobre tu proyecto y te contactamos.",
       "form.name": "Nombre",
@@ -1326,6 +1346,8 @@
       "nav.contact": "Contact",
       "testimonios.title": "Testimonials",
       "testimonios.subtitle": "What our clients say",
+      "instagram.title": "Follow us on Instagram",
+      "instagram.sub": "@somosgm.ai · News, strategy and results",
       "form.title": "Write to us",
       "form.sub": "Tell us about your project and we will get in touch.",
       "form.name": "Name",
@@ -1371,6 +1393,8 @@
       "nav.contact": "Contatti",
       "testimonios.title": "Testimonianze",
       "testimonios.subtitle": "Cosa dicono i nostri clienti",
+      "instagram.title": "Seguici su Instagram",
+      "instagram.sub": "@somosgm.ai · Novità, strategia e risultati",
       "form.title": "Scrivici",
       "form.sub": "Raccontaci il tuo progetto e ti contatteremo.",
       "form.name": "Nome",
