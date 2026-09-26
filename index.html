@@ -29,6 +29,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html { scroll-behavior: smooth; }
+  html, body { overflow-x: hidden; }
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -540,11 +541,10 @@
   }
   #vstage .card {
     flex: 0 1 260px;
-    background: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.11);
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 18px;
     padding: 1.8rem 1.4rem;
-    backdrop-filter: blur(4px);
     transition: transform 0.4s ease, background 0.4s ease;
   }
   #vstage .card:hover {
@@ -623,13 +623,12 @@
     min-width: 300px;
     max-width: 460px;
     flex: 1 1 auto;
-    background: rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.10);
     border: 1px solid rgba(255,255,255,0.18);
     border-radius: 16px;
     padding: 1rem 1.3rem;
     text-decoration: none;
     color: var(--blanco);
-    backdrop-filter: blur(4px);
     transition: transform 0.35s ease, background 0.35s ease, border-color 0.35s ease;
   }
   #vstage .social-card:hover {
@@ -707,14 +706,13 @@
   }
   #vstage .controls button {
     border: 1px solid rgba(255,255,255,0.3);
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.10);
     color: var(--blanco);
     width: 42px;
     height: 42px;
     border-radius: 50%;
     font-size: 1.1rem;
     cursor: pointer;
-    backdrop-filter: blur(4px);
     transition: background 0.3s;
   }
   #vstage .controls button:hover { background: var(--celeste); }
@@ -859,6 +857,18 @@
   html.dark .t-author { color: var(--accent); }
   html.dark .form-card h3 { color: var(--text); }
   html.dark .form-card { background: var(--card); }
+
+  /* ---------- Rendimiento ---------- */
+  main section { content-visibility: auto; contain-intrinsic-size: auto 480px; }
+  main section#contacto { contain-intrinsic-size: auto 1200px; }
+  #vstage.paused .grid,
+  #vstage.paused .monogram,
+  #vstage.paused .cta-btn { animation-play-state: paused; }
+  #vstage .slide { will-change: opacity, transform; }
+  @media (prefers-reduced-motion: reduce) {
+    #vstage .grid, #vstage .monogram, #vstage .cta-btn { animation: none; }
+    #vstage .progress span.on i { animation: none; }
+  }
 </style>
 </head>
 <body>
@@ -1003,7 +1013,7 @@
     <a class="btn btn-secondary" href="#contacto" data-i18n="hero.contactUs">Contáctanos</a>
   </div>
   <div class="video-wrap reveal">
-    <video src="AI_Integration_Video_Intro_Request.mp4" controls muted loop playsinline preload="metadata"></video>
+    <video src="AI_Integration_Video_Intro_Request.mp4" controls muted loop playsinline preload="none"></video>
   </div>
 </section>
 
@@ -1228,6 +1238,15 @@
 
   goTo(0);
   start();
+
+  // Pausa el fondo/monograma del splash cuando no está a la vista (ahorra GPU)
+  var stageEl = document.getElementById('vstage');
+  if ('IntersectionObserver' in window && stageEl) {
+    var stageObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { stageEl.classList.toggle('paused', !en.isIntersecting); });
+    }, { threshold: 0.05 });
+    stageObs.observe(stageEl);
+  }
 </script>
 <script>
   const I18N = {
