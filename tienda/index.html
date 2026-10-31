@@ -1,0 +1,2195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tienda de soluciones de GM Consulting Group: elige los servicios de Inteligencia Artificial y transformación digital que tu empresa necesita y solicita una cotización a la medida.">
+<link rel="canonical" href="https://gmfinancialfin-ai.github.io/gm-consulting/tienda/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GM Consulting Group · Tienda de soluciones">
+<meta property="og:description" content="Elige los servicios de IA y transformación digital que tu empresa necesita y solicita una cotización a la medida.">
+<meta property="og:url" content="https://gmfinancialfin-ai.github.io/gm-consulting/tienda/">
+<meta property="og:image" content="https://gmfinancialfin-ai.github.io/gm-consulting/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<title>GM Consulting Group · Tienda de soluciones</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A3D91'/%3E%3Ctext x='50' y='68' font-size='44' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3EGM%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --primary: #0A3D91;
+    --primary-dark: #072B66;
+    --accent: #2E7CF6;
+    --accent-dark: #1B5FD0;
+    --bg: #F4F7FC;
+    --card: #FFFFFF;
+    --text: #0F172A;
+    --text-muted: #5B6B84;
+    --border: #E3EAF5;
+    --soft-blue: #CBD7F3;
+    --success: #0E9F6E;
+    --radius: 16px;
+    --shadow-sm: 0 2px 8px rgba(10, 61, 145, 0.06);
+    --shadow-md: 0 10px 26px rgba(10, 61, 145, 0.12);
+    --shadow-lg: 0 24px 60px rgba(7, 43, 102, 0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body.no-scroll { overflow: hidden; }
+
+  a { color: var(--accent); }
+
+  button { font-family: inherit; }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .icon { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+  .icon-sm { width: 16px; height: 16px; }
+  .icon-lg { width: 26px; height: 26px; }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+
+  /* ---------- Announcement ---------- */
+  .announcement {
+    background: var(--primary-dark);
+    color: var(--soft-blue);
+    font-size: 0.82rem;
+    text-align: center;
+    padding: 8px 16px;
+    letter-spacing: 0.2px;
+  }
+  .announcement strong { color: #fff; }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--primary);
+    box-shadow: 0 2px 10px rgba(7, 43, 102, 0.25);
+  }
+
+  .header-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .brand-badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+  .brand-name { color: #fff; font-weight: 800; font-size: 16px; letter-spacing: 0.2px; }
+  .brand-sub { color: var(--soft-blue); font-size: 0.72rem; letter-spacing: 0.4px; text-transform: uppercase; }
+
+  .nav {
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+  }
+
+  .nav a {
+    color: #E6EEFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 9px;
+    transition: background 0.2s;
+  }
+  .nav a:hover { background: rgba(255, 255, 255, 0.12); }
+
+  .cart-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: var(--primary);
+    border: none;
+    border-radius: 11px;
+    padding: 10px 16px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    flex-shrink: 0;
+  }
+  .cart-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18); }
+
+  .cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    min-width: 21px;
+    height: 21px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: #FF5A5F;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary);
+    transform: scale(0);
+    transition: transform 0.2s ease;
+  }
+  .cart-count.visible { transform: scale(1); }
+  .cart-count.bump { animation: bump 0.35s ease; }
+
+  @keyframes bump {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background:
+      radial-gradient(900px 400px at 85% -10%, rgba(46, 124, 246, 0.35), transparent 60%),
+      linear-gradient(155deg, var(--primary-dark) 0%, var(--primary) 55%, #1246A6 100%);
+    color: #fff;
+    padding: 56px 20px 64px;
+    overflow: hidden;
+  }
+
+  .hero-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #E6EEFF;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.9rem, 3.6vw, 2.85rem);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+
+  .hero h1 span { color: #8FB8FF; }
+
+  .hero p.lead {
+    margin-top: 16px;
+    color: #D6E3FA;
+    font-size: 1.05rem;
+    max-width: 540px;
+  }
+
+  .hero-cta {
+    margin-top: 28px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 12px;
+    padding: 13px 24px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+  }
+  .btn:hover { transform: translateY(-2px); }
+
+  .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 8px 22px rgba(46, 124, 246, 0.35); }
+  .btn-primary:hover { background: var(--accent-dark); }
+
+  .btn-light { background: #fff; color: var(--primary); }
+  .btn-outline-light { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.5); }
+  .btn-outline-light:hover { border-color: #fff; background: rgba(255, 255, 255, 0.08); }
+
+  .btn-outline {
+    background: #fff;
+    color: var(--primary);
+    border-color: var(--border);
+  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent-dark); }
+
+  .btn-block { width: 100%; }
+  .btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
+
+  .hero-points {
+    margin-top: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    color: #D6E3FA;
+    font-size: 0.87rem;
+  }
+  .hero-points span { display: inline-flex; align-items: center; gap: 6px; }
+  .hero-points .icon { color: #8FB8FF; }
+
+  /* Hero quote preview */
+  .hero-panel {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    position: relative;
+  }
+
+  .hp-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #C7D8F8;
+    font-weight: 700;
+  }
+
+  .hp-tag {
+    background: rgba(143, 184, 255, 0.18);
+    color: #BFD5FF;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 0.68rem;
+    letter-spacing: 0.4px;
+  }
+
+  .hp-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  }
+  .hp-row:last-of-type { border-bottom: none; }
+
+  .hp-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(46, 124, 246, 0.3);
+    color: #CFE0FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hp-row strong { display: block; font-size: 0.9rem; color: #fff; font-weight: 700; line-height: 1.3; }
+  .hp-row small { color: #AFC7F0; font-size: 0.76rem; }
+
+  .hp-check { margin-left: auto; color: #7BE3B8; flex-shrink: 0; }
+
+  .hp-foot {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .hp-foot span { font-size: 0.78rem; color: #AFC7F0; }
+  .hp-foot strong { font-size: 1.05rem; color: #fff; }
+
+  /* ---------- Trust strip ---------- */
+  .trust {
+    max-width: 1140px;
+    margin: -26px auto 0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .trust-inner {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    padding: 20px 24px;
+  }
+
+  .trust-item { display: flex; gap: 12px; align-items: flex-start; padding: 4px 12px; }
+  .trust-item + .trust-item { border-left: 1px solid var(--border); }
+  .trust-item .icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+  .trust-item h3 { font-size: 0.92rem; color: var(--primary); }
+  .trust-item p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.45; }
+
+  /* ---------- Layout ---------- */
+  main { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+  section { padding: 56px 0 0; }
+
+  .section-head { margin-bottom: 24px; }
+  .section-title {
+    font-size: clamp(1.45rem, 2.4vw, 1.8rem);
+    color: var(--primary);
+    letter-spacing: -0.3px;
+  }
+  .section-sub { color: var(--text-muted); max-width: 640px; margin-top: 6px; font-size: 0.95rem; }
+
+  /* ---------- Catalog toolbar ---------- */
+  .catalog-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+  }
+
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .chip {
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    border-radius: 999px;
+    padding: 8px 15px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.18s;
+  }
+  .chip:hover { border-color: var(--soft-blue); color: var(--primary); }
+  .chip.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+    box-shadow: 0 6px 14px rgba(10, 61, 145, 0.22);
+  }
+
+  .search {
+    position: relative;
+    margin-left: auto;
+    min-width: 230px;
+    flex: 0 1 280px;
+  }
+  .search .icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+  }
+  .search input {
+    width: 100%;
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 999px;
+    padding: 10px 16px 10px 38px;
+    font-size: 0.88rem;
+    color: var(--text);
+    font-family: inherit;
+  }
+  .search input::placeholder { color: #93A2BA; }
+
+  /* ---------- Product grid ---------- */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .product {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), #8FB8FF);
+    opacity: 0;
+    transition: opacity 0.18s;
+  }
+
+  .product:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: #C9D9F3; }
+  .product:hover::before { opacity: 1; }
+
+  .product-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .product-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #EAF1FF, #DCE9FF);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .product-cat {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    background: #EAF1FF;
+    border-radius: 999px;
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .product h3 {
+    font-size: 1.05rem;
+    color: var(--primary);
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .product .desc {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+
+  .product ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+
+  .product li {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    font-size: 0.82rem;
+    color: #3D4C63;
+    line-height: 1.4;
+  }
+
+  .product li .icon { color: var(--success); flex-shrink: 0; margin-top: 1px; }
+
+  .product-foot {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .price { line-height: 1.2; }
+  .price small { display: block; font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+  .price strong { font-size: 0.98rem; color: var(--primary); }
+
+  .add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.18s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .add-btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
+  .add-btn.added { background: var(--success); }
+
+  .catalog-note {
+    margin-top: 22px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: #EDF3FF;
+    border: 1px solid #D8E5FB;
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: #3A4E70;
+    font-size: 0.84rem;
+  }
+  .catalog-note .icon { color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+
+  .empty-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 54px 20px;
+    color: var(--text-muted);
+    background: #fff;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+  }
+  .empty-results .icon { width: 36px; height: 36px; color: var(--soft-blue); margin-bottom: 10px; }
+
+  /* ---------- How it works ---------- */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+
+  .step {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    position: relative;
+  }
+
+  .step-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .step h3 { font-size: 0.98rem; color: var(--primary); margin-bottom: 5px; }
+  .step p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
+  /* ---------- CTA banner ---------- */
+  .cta-banner {
+    margin-top: 56px;
+    background:
+      radial-gradient(600px 260px at 90% 0%, rgba(255, 255, 255, 0.18), transparent 65%),
+      linear-gradient(135deg, var(--primary) 0%, #1246A6 60%, var(--accent) 130%);
+    border-radius: 20px;
+    color: #fff;
+    padding: 38px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 26px;
+    flex-wrap: wrap;
+    box-shadow: 0 18px 40px rgba(10, 61, 145, 0.28);
+  }
+  .cta-banner h2 { font-size: clamp(1.2rem, 2.2vw, 1.5rem); margin-bottom: 6px; }
+  .cta-banner p { color: #D6E3FA; font-size: 0.92rem; max-width: 560px; }
+  .cta-banner .btn { flex-shrink: 0; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: 60px;
+    background: var(--primary-dark);
+    color: #AFC7F0;
+    padding: 40px 20px 26px;
+  }
+
+  .footer-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .footer-brand .brand-badge { width: 34px; height: 34px; font-size: 13px; }
+  .footer-brand span { color: #fff; font-weight: 800; font-size: 1rem; }
+  .footer-inner p { font-size: 0.85rem; line-height: 1.6; max-width: 320px; }
+
+  .footer-col h4 {
+    color: #fff;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 12px;
+  }
+  .footer-col a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #C7D8F8;
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 4px 0;
+    transition: color 0.15s;
+  }
+  .footer-col a:hover { color: #fff; }
+  .footer-col .icon { color: #8FB8FF; }
+
+  .footer-bottom {
+    max-width: 1140px;
+    margin: 28px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.78rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- Overlay ---------- */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 22, 46, 0.55);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s, visibility 0.25s;
+    z-index: 90;
+  }
+  .overlay.open { opacity: 1; visibility: visible; }
+
+  /* ---------- Cart drawer ---------- */
+  .drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(430px, 100%);
+    background: #fff;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    box-shadow: var(--shadow-lg);
+  }
+  .drawer.open { transform: translateX(0); }
+
+  .drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .drawer-head h2 { font-size: 1.05rem; color: var(--primary); display: flex; align-items: center; gap: 9px; }
+  .drawer-head .icon { color: var(--accent); }
+
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    flex-shrink: 0;
+  }
+  .icon-btn:hover { background: #F2F6FD; color: var(--primary); border-color: var(--soft-blue); }
+
+  .drawer-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 20px;
+  }
+
+  .cart-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+  }
+  .cart-empty-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: #EDF3FF;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cart-empty h3 { color: var(--primary); font-size: 1rem; margin-bottom: 6px; }
+  .cart-empty p { font-size: 0.87rem; max-width: 260px; margin: 0 auto 18px; }
+
+  .cart-item {
+    display: flex;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cart-item:last-child { border-bottom: none; }
+
+  .ci-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 11px;
+    background: #EAF1FF;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ci-main { flex: 1; min-width: 0; }
+  .ci-main h4 { font-size: 0.87rem; color: var(--text); line-height: 1.35; margin-bottom: 3px; }
+  .ci-main .ci-cat { font-size: 0.72rem; color: var(--text-muted); }
+
+  .ci-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 9px;
+  }
+
+  .qty {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .qty button {
+    width: 27px;
+    height: 27px;
+    border: none;
+    background: transparent;
+    color: var(--primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+  }
+  .qty button:hover { background: #EDF3FF; }
+  .qty span {
+    min-width: 26px;
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .remove-btn {
+    background: transparent;
+    border: none;
+    color: #93A2BA;
+    font-size: 0.76rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 6px;
+  }
+  .remove-btn:hover { color: #E02424; }
+
+  .drawer-foot {
+    border-top: 1px solid var(--border);
+    padding: 16px 20px 20px;
+    background: #FBFCFE;
+  }
+
+  .cart-total {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .cart-total span { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
+  .cart-total strong { font-size: 1.15rem; color: var(--primary); }
+  .drawer-foot .hint {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+  .drawer-foot .btn { padding: 13px 20px; }
+  .drawer-foot .clear-btn {
+    width: 100%;
+    margin-top: 8px;
+    background: transparent;
+    border: none;
+    color: #93A2BA;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+  }
+  .drawer-foot .clear-btn:hover { color: #E02424; }
+
+  /* ---------- Checkout modal ---------- */
+  .modal {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s, visibility 0.25s;
+  }
+  .modal.open { opacity: 1; visibility: visible; }
+
+  .modal-panel {
+    background: #fff;
+    border-radius: 18px;
+    width: min(680px, 100%);
+    max-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(14px) scale(0.985);
+    transition: transform 0.25s;
+  }
+  .modal.open .modal-panel { transform: none; }
+
+  .modal-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 20px 22px;
+    border-bottom: 1px solid var(--border);
+  }
+  .modal-head h2 { font-size: 1.1rem; color: var(--primary); }
+  .modal-head p { font-size: 0.83rem; color: var(--text-muted); margin-top: 2px; }
+
+  .modal-body {
+    padding: 20px 22px;
+    overflow-y: auto;
+  }
+
+  .summary-box {
+    background: #F4F8FF;
+    border: 1px solid #DCE8FA;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+  }
+  .summary-box h3 {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .summary-box li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.84rem;
+    color: var(--text);
+  }
+  .summary-box li span:last-child { color: var(--text-muted); white-space: nowrap; }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .field.full { grid-column: 1 / -1; }
+  .field label { font-size: 0.78rem; font-weight: 700; color: #33425A; }
+  .field label .req { color: #E02424; }
+  .field input,
+  .field select,
+  .field textarea {
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 10px 12px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    color: var(--text);
+    background: #fff;
+    width: 100%;
+  }
+  .field input::placeholder,
+  .field textarea::placeholder { color: #A3B0C4; }
+  .field textarea { resize: vertical; min-height: 74px; }
+  .field input.invalid,
+  .field textarea.invalid { border-color: #E02424; background: #FFF7F7; }
+  .field .err { font-size: 0.72rem; color: #E02424; display: none; }
+  .field .err.show { display: block; }
+
+  .modal-foot {
+    padding: 16px 22px 20px;
+    border-top: 1px solid var(--border);
+    background: #FBFCFE;
+    border-radius: 0 0 18px 18px;
+  }
+  .modal-foot .note {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    line-height: 1.45;
+  }
+  .modal-foot .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .modal-foot .actions .btn { flex: 1; min-width: 150px; }
+
+  /* Success view */
+  .success {
+    text-align: center;
+    padding: 26px 6px 12px;
+  }
+  .success-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: #E7F8F1;
+    color: var(--success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .success h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 8px; }
+  .success p { color: var(--text-muted); font-size: 0.9rem; max-width: 430px; margin: 0 auto 20px; }
+  .success .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .success .actions .btn { padding: 11px 18px; font-size: 0.88rem; }
+
+  /* ---------- Toast ---------- */
+  .toast-wrap {
+    position: fixed;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 130;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    pointer-events: none;
+    width: min(420px, calc(100% - 32px));
+  }
+
+  .toast {
+    background: var(--primary-dark);
+    color: #fff;
+    border-radius: 10px;
+    padding: 11px 16px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    box-shadow: 0 12px 30px rgba(7, 22, 46, 0.35);
+    animation: toastIn 0.25s ease;
+    width: 100%;
+  }
+  .toast .icon { color: #7BE3B8; flex-shrink: 0; }
+  .toast.leaving { animation: toastOut 0.25s ease forwards; }
+
+  @keyframes toastIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes toastOut {
+    to { opacity: 0; transform: translateY(10px); }
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+    .hero-panel { max-width: 480px; }
+    .trust-inner { grid-template-columns: 1fr; gap: 14px; }
+    .trust-item + .trust-item { border-left: none; border-top: 1px solid var(--border); padding-top: 14px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .footer-inner > div:first-child { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 760px) {
+    .nav { display: none; }
+    .header-inner { gap: 10px; }
+    .brand-sub { display: none; }
+    .hero { padding: 40px 20px 54px; }
+    .search { margin-left: 0; flex: 1 1 100%; }
+    .product-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .cta-banner { padding: 30px 22px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+    .modal { padding: 0; align-items: flex-end; }
+    .modal-panel {
+      max-height: 94vh;
+      border-radius: 18px 18px 0 0;
+      transform: translateY(40px);
+    }
+    .modal.open .modal-panel { transform: none; }
+    .modal-foot { border-radius: 0; }
+  }
+
+  @media (max-width: 420px) {
+    .cart-btn span.label { display: none; }
+    .cart-btn { padding: 10px 12px; }
+    .product-foot { flex-direction: column; align-items: stretch; }
+    .product-foot .add-btn { justify-content: center; }
+    .price { display: flex; align-items: baseline; gap: 8px; }
+    .price small { display: inline; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/><path d="M5 2l.6 1.7L7.3 4.3 5.6 4.9 5 6.6l-.6-1.7L2.7 4.3l1.7-.6z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></symbol>
+  <symbol id="i-flow" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h3a3 3 0 0 1 3 3V14"/><path d="M6.5 10v3a3 3 0 0 0 3 3H14"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 20l-5 2V6l5-2 6 2 5-2v16l-5 2-6-2z"/><path d="M9 4v16M15 6v16"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v5M14 11v5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/><path d="M8.5 9.5c0 3 2 5 5 5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+</svg>
+
+<div class="announcement">
+  <strong>Cotización personalizada</strong> · Cada solución se diseña tras un diagnóstico · Guayaquil, Ecuador
+</div>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="GM Consulting Group, ir al inicio">
+      <span class="brand-badge">GM</span>
+      <span class="brand-text">
+        <span class="brand-name">GM Consulting Group</span>
+        <span class="brand-sub">IA · Transformación digital</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-btn" id="cartOpenBtn" aria-haspopup="dialog" aria-controls="cartDrawer">
+      <svg class="icon"><use href="#i-cart"/></svg>
+      <span class="label">Carrito</span>
+      <span class="cart-count" id="cartCount" aria-hidden="true">0</span>
+      <span class="sr-only" id="cartCountSr">0 servicios en el carrito</span>
+    </button>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-badge">
+        <svg class="icon icon-sm"><use href="#i-sparkles"/></svg>
+        Consultoría en IA · Guayaquil
+      </span>
+      <h1 id="hero-title">Arma la solución que tu empresa necesita, <span>servicio por servicio</span></h1>
+      <p class="lead">
+        Explora nuestro catálogo de soluciones de Inteligencia Artificial y transformación digital.
+        Agrega las que te interesan y envía tu solicitud: diseñamos una propuesta a la medida de tu operación.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#catalogo">
+          Ver catálogo
+          <svg class="icon icon-sm"><use href="#i-arrow"/></svg>
+        </a>
+        <a class="btn btn-outline-light" href="https://wa.me/593983461216" target="_blank" rel="noopener">
+          <svg class="icon icon-sm"><use href="#i-wa"/></svg>
+          Hablar por WhatsApp
+        </a>
+      </div>
+      <div class="hero-points">
+        <span><svg class="icon icon-sm"><use href="#i-check"/></svg> IA a la medida</span>
+        <span><svg class="icon icon-sm"><use href="#i-check"/></svg> Diagnóstico primero</span>
+        <span><svg class="icon icon-sm"><use href="#i-check"/></svg> Acompañamiento cercano</span>
+      </div>
+    </div>
+
+    <div class="hero-panel" aria-hidden="true">
+      <div class="hp-head">
+        Tu selección
+        <span class="hp-tag">A cotizar</span>
+      </div>
+      <div class="hp-row">
+        <span class="hp-icon"><svg class="icon"><use href="#i-chat"/></svg></span>
+        <div>
+          <strong>Asistente virtual de atención</strong>
+          <small>Inteligencia artificial</small>
+        </div>
+        <svg class="icon hp-check"><use href="#i-check-circle"/></svg>
+      </div>
+      <div class="hp-row">
+        <span class="hp-icon"><svg class="icon"><use href="#i-flow"/></svg></span>
+        <div>
+          <strong>Rediseño de procesos digitales</strong>
+          <small>Transformación digital</small>
+        </div>
+        <svg class="icon hp-check"><use href="#i-check-circle"/></svg>
+      </div>
+      <div class="hp-row">
+        <span class="hp-icon"><svg class="icon"><use href="#i-users"/></svg></span>
+        <div>
+          <strong>Capacitación y adopción</strong>
+          <small>Capacitación</small>
+        </div>
+        <svg class="icon hp-check"><use href="#i-check-circle"/></svg>
+      </div>
+      <div class="hp-foot">
+        <span>3 servicios · propuesta a medida</span>
+        <strong>Cotización</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg class="icon"><use href="#i-sparkles"/></svg>
+      <div>
+        <h3>IA a la medida</h3>
+        <p>Soluciones diseñadas para el reto concreto de tu empresa, no un producto genérico.</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <svg class="icon"><use href="#i-target"/></svg>
+      <div>
+        <h3>Transformación real</h3>
+        <p>Digitalizamos procesos para trabajar más rápido, mejor y con menos errores.</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <svg class="icon"><use href="#i-shield"/></svg>
+      <div>
+        <h3>Acompañamiento cercano</h3>
+        <p>Diagnóstico, implementación y resultados: no terminamos con la entrega.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <!-- CATALOG -->
+  <section id="catalogo" aria-labelledby="catalogo-title">
+    <div class="section-head">
+      <h2 class="section-title" id="catalogo-title">Catálogo de soluciones</h2>
+      <p class="section-sub">
+        Selecciona los servicios que responden a tu necesidad. Puedes combinar varios: la propuesta se ajusta a tu diagnóstico.
+      </p>
+    </div>
+
+    <div class="catalog-toolbar">
+      <div class="filters" role="group" aria-label="Filtrar por categoría">
+        <button class="chip active" data-filter="all" aria-pressed="true">Todos</button>
+        <button class="chip" data-filter="ia" aria-pressed="false">Inteligencia artificial</button>
+        <button class="chip" data-filter="digital" aria-pressed="false">Transformación digital</button>
+        <button class="chip" data-filter="estrategia" aria-pressed="false">Estrategia</button>
+        <button class="chip" data-filter="adopcion" aria-pressed="false">Capacitación</button>
+      </div>
+      <div class="search">
+        <svg class="icon icon-sm"><use href="#i-search"/></svg>
+        <label class="sr-only" for="searchInput">Buscar servicios</label>
+        <input type="search" id="searchInput" placeholder="Buscar un servicio…" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="product-grid" id="productGrid" aria-live="polite"></div>
+
+    <div class="catalog-note">
+      <svg class="icon icon-sm"><use href="#i-sparkles"/></svg>
+      <p>
+        <strong>¿Por qué no hay precios publicados?</strong> Cada solución se dimensiona después de un diagnóstico:
+        no publicamos tarifas para no vender algo que no responde a tu realidad. Al enviar tu selección coordinamos
+        ese diagnóstico y preparamos la cotización.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="como-funciona" aria-labelledby="pasos-title">
+    <div class="section-head">
+      <h2 class="section-title" id="pasos-title">Cómo funciona</h2>
+      <p class="section-sub">Del catálogo a una propuesta concreta, en cuatro pasos.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Elige tus servicios</h3>
+        <p>Agrega al carrito las soluciones que te interesan. Puedes ajustar cantidades o quitar las que no apliquen.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Envía tu solicitud</h3>
+        <p>Completa tus datos y envíanos la selección por WhatsApp o correo. Te respondemos para coordinar.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Diagnóstico</h3>
+        <p>Revisamos tu proceso, el cuello de botella y qué parte conviene automatizar o digitalizar primero.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Propuesta a la medida</h3>
+        <p>Recibes el alcance, el enfoque y la cotización ajustada a tus objetivos y presupuesto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section aria-labelledby="cta-title">
+    <div class="cta-banner">
+      <div>
+        <h2 id="cta-title">¿No sabes qué servicio elegir?</h2>
+        <p>Empieza por el diagnóstico: identificamos dónde la IA y la digitalización generan impacto real en tu operación.</p>
+      </div>
+      <a class="btn btn-light" href="https://wa.me/593983461216" target="_blank" rel="noopener">
+        <svg class="icon icon-sm"><use href="#i-wa"/></svg>
+        Conversar con un consultor
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <span class="brand-badge">GM</span>
+        <span>GM Consulting Group</span>
+      </div>
+      <p>Consultoría en implementación de Inteligencia Artificial y transformación digital. Guayaquil, Ecuador.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="https://wa.me/593983461216" target="_blank" rel="noopener">
+        <svg class="icon icon-sm"><use href="#i-wa"/></svg>
+        +593 98 346 1216
+      </a>
+      <a href="mailto:somosgm.ai@gmail.com">
+        <svg class="icon icon-sm"><use href="#i-mail"/></svg>
+        somosgm.ai@gmail.com
+      </a>
+      <a href="tel:+593983461216">
+        <svg class="icon icon-sm"><use href="#i-phone"/></svg>
+        +593 98 346 1216
+      </a>
+    </div>
+    <div class="footer-col">
+      <h4>Ubicación</h4>
+      <a href="https://maps.google.com/?q=Guayaquil,Ecuador" target="_blank" rel="noopener">
+        <svg class="icon icon-sm"><use href="#i-pin"/></svg>
+        Guayaquil, Ecuador
+      </a>
+      <a href="#catalogo">
+        <svg class="icon icon-sm"><use href="#i-cart"/></svg>
+        Ver catálogo
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year">2026</span> GM Consulting Group. Todos los derechos reservados.</span>
+    <span>Los servicios se cotizan después del diagnóstico.</span>
+  </div>
+</footer>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Cart drawer -->
+<aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+  <div class="drawer-head">
+    <h2 id="cartTitle">
+      <svg class="icon"><use href="#i-cart"/></svg>
+      Tu selección
+    </h2>
+    <button class="icon-btn" id="cartCloseBtn" aria-label="Cerrar carrito">
+      <svg class="icon"><use href="#i-close"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot" id="cartFoot" hidden>
+    <div class="cart-total">
+      <span>Total</span>
+      <strong>A cotizar</strong>
+    </div>
+    <p class="hint" id="cartHint">Los valores se definen después del diagnóstico, según el alcance de cada servicio.</p>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">
+      Solicitar cotización
+      <svg class="icon icon-sm"><use href="#i-arrow"/></svg>
+    </button>
+    <button class="clear-btn" id="clearCartBtn">Vaciar carrito</button>
+  </div>
+</aside>
+
+<!-- Checkout modal -->
+<div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" aria-hidden="true">
+  <div class="modal-panel">
+    <div class="modal-head">
+      <div>
+        <h2 id="checkoutTitle">Solicitar cotización</h2>
+        <p id="checkoutSub">Cuéntanos de tu empresa y te contactamos para coordinar el diagnóstico.</p>
+      </div>
+      <button class="icon-btn" id="checkoutCloseBtn" aria-label="Cerrar formulario">
+        <svg class="icon"><use href="#i-close"/></svg>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div id="checkoutFormView">
+        <div class="summary-box">
+          <h3>Servicios seleccionados</h3>
+          <ul id="checkoutSummary"></ul>
+        </div>
+
+        <form id="quoteForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fName">Nombre y apellido <span class="req">*</span></label>
+              <input type="text" id="fName" name="name" placeholder="Ej. María Pérez" autocomplete="name" required>
+              <span class="err" id="errName">Ingresa tu nombre.</span>
+            </div>
+            <div class="field">
+              <label for="fCompany">Empresa <span class="req">*</span></label>
+              <input type="text" id="fCompany" name="company" placeholder="Nombre de tu empresa" autocomplete="organization" required>
+              <span class="err" id="errCompany">Ingresa el nombre de tu empresa.</span>
+            </div>
+            <div class="field">
+              <label for="fEmail">Correo electrónico <span class="req">*</span></label>
+              <input type="email" id="fEmail" name="email" placeholder="nombre@empresa.com" autocomplete="email" required>
+              <span class="err" id="errEmail">Ingresa un correo válido.</span>
+            </div>
+            <div class="field">
+              <label for="fPhone">Teléfono / WhatsApp</label>
+              <input type="tel" id="fPhone" name="phone" placeholder="+593 99 999 9999" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="fSector">Sector de la empresa</label>
+              <input type="text" id="fSector" name="sector" placeholder="Ej. comercio, salud, servicios">
+            </div>
+            <div class="field">
+              <label for="fBudget">Presupuesto estimado</label>
+              <input type="text" id="fBudget" name="budget" placeholder="Opcional. Ej. por definir">
+            </div>
+            <div class="field full">
+              <label for="fMessage">¿Qué proceso quieres mejorar?</label>
+              <textarea id="fMessage" name="message" placeholder="Cuéntanos brevemente qué consume más tiempo hoy o qué te gustaría automatizar."></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="checkoutSuccess" hidden></div>
+    </div>
+
+    <div class="modal-foot" id="checkoutFoot">
+      <p class="note">Al enviar, se abrirá WhatsApp con tu selección lista para mandar. También puedes enviarla por correo.</p>
+      <div class="actions">
+        <button class="btn btn-outline" id="sendEmailBtn" type="button">
+          <svg class="icon icon-sm"><use href="#i-mail"/></svg>
+          Enviar por correo
+        </button>
+        <button class="btn btn-primary" id="sendWaBtn" type="button">
+          <svg class="icon icon-sm"><use href="#i-wa"/></svg>
+          Enviar por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toastWrap" aria-live="polite" aria-atomic="true"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  var WA_NUMBER = "593983461216";
+  var EMAIL = "somosgm.ai@gmail.com";
+  var STORAGE_KEY = "gm_tienda_cart_v1";
+
+  var CATEGORIES = {
+    ia: "Inteligencia artificial",
+    digital: "Transformación digital",
+    estrategia: "Estrategia",
+    adopcion: "Capacitación"
+  };
+
+  var PRODUCTS = [
+    {
+      id: "diagnostico-ia",
+      cat: "estrategia",
+      icon: "i-target",
+      title: "Diagnóstico de procesos e IA",
+      desc: "Mapeamos tu operación y detectamos dónde la Inteligencia Artificial genera impacto real antes de invertir.",
+      bullets: [
+        "Levantamiento de procesos críticos",
+        "Identificación de cuellos de botella",
+        "Priorización de oportunidades por impacto"
+      ]
+    },
+    {
+      id: "asistente-virtual",
+      cat: "ia",
+      icon: "i-chat",
+      title: "Asistente virtual de atención",
+      desc: "Un asistente que responde a tus clientes con la información de tu negocio, disponible todo el tiempo.",
+      bullets: [
+        "Atención automatizada 24/7",
+        "Respuestas con el contexto de tu empresa",
+        "Escalamiento a una persona cuando hace falta"
+      ]
+    },
+    {
+      id: "automatizacion-faq",
+      cat: "ia",
+      icon: "i-bolt",
+      title: "Automatización de preguntas frecuentes",
+      desc: "Automatizamos las respuestas repetitivas que hoy consumen horas de tu equipo.",
+      bullets: [
+        "Base de conocimiento de tu negocio",
+        "Respuestas consistentes y rápidas",
+        "Menos carga operativa para el equipo"
+      ]
+    },
+    {
+      id: "analisis-documentos",
+      cat: "ia",
+      icon: "i-doc",
+      title: "Análisis automatizado de documentos",
+      desc: "Extraemos y organizamos información de contratos, formularios y documentos sin captura manual.",
+      bullets: [
+        "Lectura automática de documentos",
+        "Extracción de datos clave",
+        "Menos errores de digitación"
+      ]
+    },
+    {
+      id: "generacion-contenido",
+      cat: "ia",
+      icon: "i-pen",
+      title: "Generación de contenido asistida",
+      desc: "Producimos contenido para tu operación y comunicación con apoyo de IA y revisión humana.",
+      bullets: [
+        "Contenido alineado a tu marca",
+        "Flujos de revisión y aprobación",
+        "Más velocidad de publicación"
+      ]
+    },
+    {
+      id: "prediccion-demanda",
+      cat: "ia",
+      icon: "i-chart",
+      title: "Recomendación y predicción de demanda",
+      desc: "Usamos tus datos para anticipar demanda y recomendar la mejor opción a cada cliente.",
+      bullets: [
+        "Análisis de datos históricos",
+        "Predicción de demanda",
+        "Recomendaciones personalizadas"
+      ]
+    },
+    {
+      id: "rediseno-procesos",
+      cat: "digital",
+      icon: "i-flow",
+      title: "Rediseño de procesos digitales",
+      desc: "Rediseñamos el proceso de trabajo y luego lo instrumentamos con tecnología, con una mejora medible.",
+      bullets: [
+        "Diseño del proceso objetivo",
+        "Digitalización de tareas clave",
+        "Indicadores de velocidad y calidad"
+      ]
+    },
+    {
+      id: "hoja-ruta",
+      cat: "estrategia",
+      icon: "i-map",
+      title: "Hoja de ruta de digitalización",
+      desc: "Definimos con tu dirección el camino correcto de digitalización, ajustado a metas y presupuesto.",
+      bullets: [
+        "Alineación con objetivos del negocio",
+        "Prioridades por etapas",
+        "Decisiones de inversión sustentadas"
+      ]
+    },
+    {
+      id: "capacitacion",
+      cat: "adopcion",
+      icon: "i-users",
+      title: "Capacitación y adopción",
+      desc: "Formamos a tu equipo para que use la tecnología con confianza y la transformación se sostenga.",
+      bullets: [
+        "Formación práctica por rol",
+        "Material de apoyo y guías",
+        "Seguimiento de adopción"
+      ]
+    }
+  ];
+
+  var state = {
+    cart: {},
+    filter: "all",
+    query: "",
+    lastFocus: null,
+    lastRequest: null
+  };
+
+  var el = {
+    grid: document.getElementById("productGrid"),
+    search: document.getElementById("searchInput"),
+    cartBtn: document.getElementById("cartOpenBtn"),
+    cartCount: document.getElementById("cartCount"),
+    cartCountSr: document.getElementById("cartCountSr"),
+    drawer: document.getElementById("cartDrawer"),
+    cartBody: document.getElementById("cartBody"),
+    cartFoot: document.getElementById("cartFoot"),
+    cartHint: document.getElementById("cartHint"),
+    overlay: document.getElementById("overlay"),
+    cartClose: document.getElementById("cartCloseBtn"),
+    clearBtn: document.getElementById("clearCartBtn"),
+    checkoutBtn: document.getElementById("checkoutBtn"),
+    modal: document.getElementById("checkoutModal"),
+    modalHead: document.querySelector(".modal-head"),
+    checkoutTitle: document.getElementById("checkoutTitle"),
+    checkoutSub: document.getElementById("checkoutSub"),
+    formView: document.getElementById("checkoutFormView"),
+    successView: document.getElementById("checkoutSuccess"),
+    modalFoot: document.getElementById("checkoutFoot"),
+    checkoutSummary: document.getElementById("checkoutSummary"),
+    checkoutClose: document.getElementById("checkoutCloseBtn"),
+    form: document.getElementById("quoteForm"),
+    sendWa: document.getElementById("sendWaBtn"),
+    sendEmail: document.getElementById("sendEmailBtn"),
+    toastWrap: document.getElementById("toastWrap")
+  };
+
+  /* ---------- Persistence ---------- */
+  function loadCart() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      var parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === "object") {
+        Object.keys(parsed).forEach(function (id) {
+          if (findProduct(id)) {
+            var q = parseInt(parsed[id], 10);
+            if (q > 0) state.cart[id] = Math.min(q, 99);
+          }
+        });
+      }
+    } catch (e) { /* storage no disponible */ }
+  }
+
+  function saveCart() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.cart));
+    } catch (e) { /* ignorar */ }
+  }
+
+  /* ---------- Helpers ---------- */
+  function findProduct(id) {
+    for (var i = 0; i < PRODUCTS.length; i++) {
+      if (PRODUCTS[i].id === id) return PRODUCTS[i];
+    }
+    return null;
+  }
+
+  function icon(name, cls) {
+    return '<svg class="icon ' + (cls || "") + '" aria-hidden="true"><use href="#' + name + '"/></svg>';
+  }
+
+  function cartIds() {
+    return Object.keys(state.cart).filter(function (id) { return state.cart[id] > 0; });
+  }
+
+  function cartCount() {
+    return cartIds().reduce(function (sum, id) { return sum + state.cart[id]; }, 0);
+  }
+
+  function cartLines() {
+    return cartIds().map(function (id) {
+      return { product: findProduct(id), qty: state.cart[id] };
+    });
+  }
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function normalize(str) {
+    return String(str).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
+  function toast(message) {
+    var node = document.createElement("div");
+    node.className = "toast";
+    node.innerHTML = icon("i-check-circle", "icon-sm") + "<span>" + escapeHtml(message) + "</span>";
+    el.toastWrap.appendChild(node);
+    window.setTimeout(function () {
+      node.classList.add("leaving");
+      window.setTimeout(function () {
+        if (node.parentNode) node.parentNode.removeChild(node);
+      }, 260);
+    }, 2400);
+  }
+
+  /* ---------- Catalog ---------- */
+  function renderCatalog() {
+    var q = normalize(state.query.trim());
+    var list = PRODUCTS.filter(function (p) {
+      var catOk = state.filter === "all" || p.cat === state.filter;
+      if (!catOk) return false;
+      if (!q) return true;
+      var haystack = normalize(p.title + " " + p.desc + " " + p.bullets.join(" ") + " " + CATEGORIES[p.cat]);
+      return haystack.indexOf(q) !== -1;
+    });
+
+    if (!list.length) {
+      el.grid.innerHTML =
+        '<div class="empty-results">' +
+          icon("i-search", "icon-lg") +
+          '<p>No encontramos servicios con ese criterio.<br>Prueba con otra palabra o revisa todas las categorías.</p>' +
+        '</div>';
+      return;
+    }
+
+    el.grid.innerHTML = list.map(function (p) {
+      var inCart = state.cart[p.id] > 0;
+      return (
+        '<article class="product" data-id="' + p.id + '">' +
+          '<div class="product-top">' +
+            '<span class="product-icon">' + icon(p.icon, "icon-lg") + '</span>' +
+            '<span class="product-cat">' + escapeHtml(CATEGORIES[p.cat]) + '</span>' +
+          '</div>' +
+          '<h3>' + escapeHtml(p.title) + '</h3>' +
+          '<p class="desc">' + escapeHtml(p.desc) + '</p>' +
+          '<ul>' +
+            p.bullets.map(function (b) {
+              return '<li>' + icon("i-check", "icon-sm") + '<span>' + escapeHtml(b) + '</span></li>';
+            }).join("") +
+          '</ul>' +
+          '<div class="product-foot">' +
+            '<div class="price"><small>Precio</small><strong>A cotizar</strong></div>' +
+            '<button class="add-btn' + (inCart ? " added" : "") + '" data-add="' + p.id + '" aria-label="Agregar ' + escapeHtml(p.title) + ' al carrito">' +
+              icon(inCart ? "i-check" : "i-plus", "icon-sm") +
+              (inCart ? "Agregado" : "Agregar") +
+            '</button>' +
+          '</div>' +
+        '</article>'
+      );
+    }).join("");
+  }
+
+  /* ---------- Cart UI ---------- */
+  function renderCart() {
+    var lines = cartLines();
+    var count = cartCount();
+
+    el.cartCount.textContent = count > 99 ? "99+" : String(count);
+    el.cartCount.classList.toggle("visible", count > 0);
+    el.cartCountSr.textContent = count + (count === 1 ? " servicio en el carrito" : " servicios en el carrito");
+
+    if (!lines.length) {
+      el.cartBody.innerHTML =
+        '<div class="cart-empty">' +
+          '<div class="cart-empty-icon">' + icon("i-cart", "icon-lg") + '</div>' +
+          '<h3>Tu carrito está vacío</h3>' +
+          '<p>Agrega servicios del catálogo para armar tu solicitud de cotización.</p>' +
+          '<button class="btn btn-outline" id="goCatalogBtn">Ver catálogo</button>' +
+        '</div>';
+      el.cartFoot.hidden = true;
+      var go = document.getElementById("goCatalogBtn");
+      if (go) {
+        go.addEventListener("click", function () {
+          closeCart();
+          document.getElementById("catalogo").scrollIntoView({ behavior: "smooth" });
+        });
+      }
+      return;
+    }
+
+    el.cartFoot.hidden = false;
+
+    el.cartBody.innerHTML = lines.map(function (line) {
+      var p = line.product;
+      return (
+        '<div class="cart-item" data-id="' + p.id + '">' +
+          '<span class="ci-icon">' + icon(p.icon) + '</span>' +
+          '<div class="ci-main">' +
+            '<h4>' + escapeHtml(p.title) + '</h4>' +
+            '<span class="ci-cat">' + escapeHtml(CATEGORIES[p.cat]) + '</span>' +
+            '<div class="ci-controls">' +
+              '<div class="qty" role="group" aria-label="Cantidad de ' + escapeHtml(p.title) + '">' +
+                '<button data-dec="' + p.id + '" aria-label="Quitar una unidad">' + icon("i-minus", "icon-sm") + '</button>' +
+                '<span>' + line.qty + '</span>' +
+                '<button data-inc="' + p.id + '" aria-label="Agregar una unidad">' + icon("i-plus", "icon-sm") + '</button>' +
+              '</div>' +
+              '<button class="remove-btn" data-remove="' + p.id + '">' + icon("i-trash", "icon-sm") + ' Quitar</button>' +
+            '</div>' +
+          '</div>' +
+        '</div>'
+      );
+    }).join("");
+
+    el.cartHint.textContent = count === 1
+      ? "1 servicio seleccionado. El valor se define después del diagnóstico."
+      : count + " servicios seleccionados. El valor se define después del diagnóstico.";
+  }
+
+  function updateAddButtons() {
+    var buttons = el.grid.querySelectorAll("[data-add]");
+    for (var i = 0; i < buttons.length; i++) {
+      var id = buttons[i].getAttribute("data-add");
+      var inCart = state.cart[id] > 0;
+      buttons[i].classList.toggle("added", inCart);
+      buttons[i].innerHTML = icon(inCart ? "i-check" : "i-plus", "icon-sm") + (inCart ? "Agregado" : "Agregar");
+    }
+  }
+
+  /* ---------- Cart actions ---------- */
+  function addToCart(id) {
+    var p = findProduct(id);
+    if (!p) return;
+    state.cart[id] = Math.min((state.cart[id] || 0) + 1, 99);
+    saveCart();
+    renderCart();
+    updateAddButtons();
+
+    el.cartCount.classList.remove("bump");
+    void el.cartCount.offsetWidth;
+    el.cartCount.classList.add("bump");
+
+    toast("“" + p.title + "” agregado a tu selección");
+  }
+
+  function changeQty(id, delta) {
+    if (!state.cart[id]) return;
+    state.cart[id] = state.cart[id] + delta;
+    if (state.cart[id] <= 0) delete state.cart[id];
+    saveCart();
+    renderCart();
+    updateAddButtons();
+  }
+
+  function removeItem(id) {
+    delete state.cart[id];
+    saveCart();
+    renderCart();
+    updateAddButtons();
+  }
+
+  function clearCart() {
+    state.cart = {};
+    saveCart();
+    renderCart();
+    updateAddButtons();
+    toast("Carrito vaciado");
+  }
+
+  /* ---------- Panels ---------- */
+  function openCart() {
+    state.lastFocus = document.activeElement;
+    el.drawer.classList.add("open");
+    el.drawer.setAttribute("aria-hidden", "false");
+    el.overlay.classList.add("open");
+    document.body.classList.add("no-scroll");
+    window.setTimeout(function () { el.cartClose.focus(); }, 50);
+  }
+
+  function closeCart() {
+    el.drawer.classList.remove("open");
+    el.drawer.setAttribute("aria-hidden", "true");
+    if (!el.modal.classList.contains("open")) {
+      el.overlay.classList.remove("open");
+      document.body.classList.remove("no-scroll");
+    }
+    if (state.lastFocus && state.lastFocus.focus) state.lastFocus.focus();
+  }
+
+  function openCheckout() {
+    if (!cartIds().length) return;
+    state.lastFocus = document.activeElement;
+    renderCheckoutSummary();
+    resetCheckoutView();
+    el.modal.classList.add("open");
+    el.modal.setAttribute("aria-hidden", "false");
+    el.overlay.classList.add("open");
+    document.body.classList.add("no-scroll");
+    window.setTimeout(function () {
+      var first = document.getElementById("fName");
+      if (first) first.focus();
+    }, 60);
+  }
+
+  function closeCheckout() {
+    el.modal.classList.remove("open");
+    el.modal.setAttribute("aria-hidden", "true");
+    if (!el.drawer.classList.contains("open")) {
+      el.overlay.classList.remove("open");
+      document.body.classList.remove("no-scroll");
+    }
+    if (state.lastFocus && state.lastFocus.focus) state.lastFocus.focus();
+  }
+
+  function renderCheckoutSummary() {
+    el.checkoutSummary.innerHTML = cartLines().map(function (line) {
+      return '<li><span>' + escapeHtml(line.product.title) + (line.qty > 1 ? " × " + line.qty : "") + '</span><span>A cotizar</span></li>';
+    }).join("");
+  }
+
+  function resetCheckoutView() {
+    el.checkoutTitle.textContent = "Solicitar cotización";
+    el.checkoutSub.textContent = "Cuéntanos de tu empresa y te contactamos para coordinar el diagnóstico.";
+    el.successView.hidden = true;
+    el.successView.innerHTML = "";
+    el.formView.hidden = false;
+    el.modalFoot.hidden = false;
+  }
+
+  function showSuccess(request) {
+    state.lastRequest = request;
+    el.checkoutTitle.textContent = "Solicitud preparada";
+    el.checkoutSub.textContent = "Revisa el mensaje y envíalo por el canal que prefieras.";
+    el.formView.hidden = true;
+    el.modalFoot.hidden = true;
+
+    el.successView.hidden = false;
+    el.successView.innerHTML =
+      '<div class="success">' +
+        '<div class="success-icon">' + icon("i-check-circle", "icon-lg") + '</div>' +
+        '<h3>¡Listo, ' + escapeHtml(request.name.split(" ")[0]) + '!</h3>' +
+        '<p>Tu selección de <strong>' + request.count + (request.count === 1 ? ' servicio' : ' servicios') + '</strong> está lista. ' +
+        'Si WhatsApp no se abrió automáticamente, usa los botones de abajo o copia el resumen.</p>' +
+        '<div class="actions">' +
+          '<button class="btn btn-primary" id="successWa">' + icon("i-wa", "icon-sm") + ' Abrir WhatsApp</button>' +
+          '<button class="btn btn-outline" id="successEmail">' + icon("i-mail", "icon-sm") + ' Enviar por correo</button>' +
+          '<button class="btn btn-outline" id="successCopy">' + icon("i-copy", "icon-sm") + ' Copiar resumen</button>' +
+        '</div>' +
+      '</div>';
+
+    document.getElementById("successWa").addEventListener("click", function () {
+      window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(request.message), "_blank", "noopener");
+    });
+    document.getElementById("successEmail").addEventListener("click", function () {
+      window.location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(request.subject) + "&body=" + encodeURIComponent(request.message);
+    });
+    document.getElementById("successCopy").addEventListener("click", function () {
+      copyText(request.message).then(function (ok) {
+        toast(ok ? "Resumen copiado al portapapeles" : "No se pudo copiar. Selecciona el texto manualmente.");
+      });
+    });
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(function () { return true; }).catch(function () { return false; });
+    }
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return Promise.resolve(ok);
+    } catch (e) {
+      return Promise.resolve(false);
+    }
+  }
+
+  /* ---------- Form validation + message ---------- */
+  function setError(id, show) {
+    var input = document.getElementById(id);
+    var err = document.getElementById("err" + id.slice(1));
+    if (input) input.classList.toggle("invalid", show);
+    if (err) err.classList.toggle("show", show);
+  }
+
+  function validateForm() {
+    var name = document.getElementById("fName");
+    var company = document.getElementById("fCompany");
+    var email = document.getElementById("fEmail");
+    var valid = true;
+
+    if (!name.value.trim()) { setError("fName", true); valid = false; } else setError("fName", false);
+    if (!company.value.trim()) { setError("fCompany", true); valid = false; } else setError("fCompany", false);
+
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim());
+    if (!emailOk) { setError("fEmail", true); valid = false; } else setError("fEmail", false);
+
+    if (!valid) {
+      var firstInvalid = el.form.querySelector(".invalid");
+      if (firstInvalid) firstInvalid.focus();
+    }
+    return valid;
+  }
+
+  function buildRequest() {
+    var name = document.getElementById("fName").value.trim();
+    var company = document.getElementById("fCompany").value.trim();
+    var email = document.getElementById("fEmail").value.trim();
+    var phone = document.getElementById("fPhone").value.trim();
+    var sector = document.getElementById("fSector").value.trim();
+    var budget = document.getElementById("fBudget").value.trim();
+    var message = document.getElementById("fMessage").value.trim();
+    var lines = cartLines();
+
+    var count = lines.reduce(function (s, l) { return s + l.qty; }, 0);
+
+    var body = "Hola GM Consulting Group, quiero cotizar los siguientes servicios:\n\n";
+    lines.forEach(function (l) {
+      body += "• " + l.product.title + (l.qty > 1 ? " (x" + l.qty + ")" : "") + "\n";
+    });
+    body += "\n--- Datos de contacto ---\n";
+    body += "Nombre: " + name + "\n";
+    body += "Empresa: " + company + "\n";
+    body += "Correo: " + email + "\n";
+    if (phone) body += "Teléfono / WhatsApp: " + phone + "\n";
+    if (sector) body += "Sector: " + sector + "\n";
+    if (budget) body += "Presupuesto estimado: " + budget + "\n";
+    if (message) body += "\nProceso a mejorar:\n" + message + "\n";
+    body += "\nEnviado desde la tienda de soluciones de GM Consulting Group.";
+
+    return {
+      name: name,
+      company: company,
+      email: email,
+      phone: phone,
+      count: count,
+      subject: "Solicitud de cotización · " + company,
+      message: body
+    };
+  }
+
+  function handleSend(channel) {
+    if (!validateForm()) return;
+    var request = buildRequest();
+
+    if (channel === "wa") {
+      window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(request.message), "_blank", "noopener");
+    } else {
+      window.location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(request.subject) + "&body=" + encodeURIComponent(request.message);
+    }
+
+    showSuccess(request);
+    closeCartSilently();
+
+    // La selección ya viaja en el mensaje: se limpia el carrito.
+    state.cart = {};
+    saveCart();
+    renderCart();
+    updateAddButtons();
+
+    toast(channel === "wa" ? "Abriendo WhatsApp con tu solicitud…" : "Abriendo tu correo con la solicitud…");
+  }
+
+  function closeCartSilently() {
+    el.drawer.classList.remove("open");
+    el.drawer.setAttribute("aria-hidden", "true");
+  }
+
+  /* ---------- Events ---------- */
+  el.grid.addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-add]");
+    if (btn) addToCart(btn.getAttribute("data-add"));
+  });
+
+  el.cartBody.addEventListener("click", function (e) {
+    var inc = e.target.closest("[data-inc]");
+    var dec = e.target.closest("[data-dec]");
+    var rem = e.target.closest("[data-remove]");
+    if (inc) changeQty(inc.getAttribute("data-inc"), 1);
+    else if (dec) changeQty(dec.getAttribute("data-dec"), -1);
+    else if (rem) removeItem(rem.getAttribute("data-remove"));
+  });
+
+  document.querySelectorAll(".chip").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      document.querySelectorAll(".chip").forEach(function (c) {
+        c.classList.remove("active");
+        c.setAttribute("aria-pressed", "false");
+      });
+      chip.classList.add("active");
+      chip.setAttribute("aria-pressed", "true");
+      state.filter = chip.getAttribute("data-filter");
+      renderCatalog();
+      updateAddButtons();
+    });
+  });
+
+  el.search.addEventListener("input", function () {
+    state.query = el.search.value;
+    renderCatalog();
+    updateAddButtons();
+  });
+
+  el.cartBtn.addEventListener("click", openCart);
+  el.cartClose.addEventListener("click", closeCart);
+  el.overlay.addEventListener("click", function () {
+    if (el.modal.classList.contains("open")) closeCheckout();
+    else closeCart();
+  });
+  el.clearBtn.addEventListener("click", clearCart);
+  el.checkoutBtn.addEventListener("click", openCheckout);
+  el.sendWa.addEventListener("click", function () { handleSend("wa"); });
+  el.sendEmail.addEventListener("click", function () { handleSend("email"); });
+  el.checkoutClose.addEventListener("click", closeCheckout);
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      if (el.modal.classList.contains("open")) closeCheckout();
+      else if (el.drawer.classList.contains("open")) closeCart();
+    }
+    if (e.key === "Tab") {
+      var container = el.modal.classList.contains("open") ? el.modal : (el.drawer.classList.contains("open") ? el.drawer : null);
+      if (!container) return;
+      var focusables = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      var visible = Array.prototype.filter.call(focusables, function (node) {
+        return node.getClientRects().length > 0 && !node.disabled;
+      });
+      if (!visible.length) return;
+      var first = visible[0];
+      var last = visible[visible.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+
+  el.form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    handleSend("wa");
+  });
+
+  /* ---------- Init ---------- */
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+  loadCart();
+  renderCatalog();
+  renderCart();
+  updateAddButtons();
+})();
+</script>
+</body>
+</html>
